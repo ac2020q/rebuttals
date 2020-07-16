@@ -1,7 +1,7 @@
 # rebuttals
 Dear all,
 
-1, "Updated Table 1.pdf" contains the updated results and some other classical results on AES-MMO/MP and Groestl.
+1, Table 1 contains the updated results and some other classical results on AES-MMO/MP and Groestl.
 ![pic1](https://github.com/ac2020q/rebuttals/blob/master/Updated_Table_1.png)
 
 2, There is a detailed anwser for replacing Grover search with certainty in Alg. 4 by Grover search without certainty as follows:
