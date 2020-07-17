@@ -13,9 +13,9 @@ Given nonzero input-output differences for the S-box of AES, the probability tha
 
 We take the first non-full SSB as an example (corresponding to G^{(0)}). Please look at Fig. 4 in the submitted paper. Given input-output differences of SSB, we guess A[0], then \Delta B[0] is known. Then, all the other differences are determined due to MC. Now there are 4 active S-boxes whose input-output differences have to match through the DDT of the S-boxes. The probability is about (127/255)^4.
 
-1)	If there is no solution by traversing 2^{11} for G^{(0)}, which means that for each guessing of A[0], we do not have a valid matching for the 4 active S-boxes. The probability is p=(1-(127/255)^4)^{2^{8}}= 8.7 X 10^{-8}. In this case, running Grover on U_G will output an invalid starting point. Since there are 4 non-full SSBs, we get an invalid starting point with probability 1-(1-p)^4, which is almost 0.
+- If there is no solution by traversing 2^{11} for G^{(0)}, which means that for each guessing  A[0], we do not have a valid matching for the 4 active S-boxes. The probability is p=(1-(127/255)^4)^{2^{8}}= 8.7 X 10^{-8}. In this case, running Grover on U_G will output an invalid starting point. Since there are 4 non-full SSBs, we get an invalid starting point with probability 1-(1-p)^4, which is almost 0.
 
-2)	If there are solutions by traversing 2^{11} for G^{(0)}. The probability is 1-8.7 X 10^{-8}. After about 1/arcsin{2^{-11/2}} \approx 2^{11/2}\approx 45.25 Grover iterations, we get the superposition with good states with probability of about 1-2^{-11} due to the Grover algorithm. We just consider the worst case that there is only one solution.
+- If there are solutions by traversing 2^{11} for G^{(0)}. The probability is 1-8.7 X 10^{-8}. After about 1/arcsin{2^{-11/2}} \approx 2^{11/2}\approx 45.25 Grover iterations, we get the superposition with good states with probability of about 1-2^{-11} due to the Grover algorithm. We just consider the worst case that there is only one solution.
 
 Since there are 4 SSB, for a given input of U_F, we get a valid starting point with probability (1- 8.7 x 10^{-8})^4 x (1-2^{-11})^4 = 0.998. Therefore, we get a collision pair with probability 0.998 x 2^{-83}. Then we run about \sqrt{1/Pr_s} Grover iterations on U_F to get a collision. The complexity is very close to that of the submitted paper. 
 
