@@ -5,7 +5,7 @@
 
 2. Replace Grover search with certainty in Algorithm 4 by Grover search without certainty:
 
-> Quantum search is used as if it transforms an exact exhaustive search cost of 2^n to pi/4*2^{n/2}. For example, in Algorithm 4, step 4 "Run Grover search with certainty...", and the complexity analysis claims a cost of pi/4*2^{11/2}. This completely neglects the fact that, if you use [BHMT02] and if the number of solutions is unknown, we can be arbitrarily precise with a polynomial overhead. In these attacks, there is some variance in the number of solutions, as for example the number of solutions for the differential equation of the Sbox is either 2 or 4. Also, if you really want to do costs estimates with high precision, the probability that the equation has a solution is not exactly 1/2.
+> Quantum search is used as if it transforms an exact exhaustive search cost of 2^n to pi/4 x 2^{n/2}. For example, in Algorithm 4, step 4 "Run Grover search with certainty...", and the complexity analysis claims a cost of pi/4 x 2^{11/2}. This completely neglects the fact that, if you use [BHMT02] and if the number of solutions is unknown, we can be arbitrarily precise with a polynomial overhead. In these attacks, there is some variance in the number of solutions, as for example the number of solutions for the differential equation of the Sbox is either 2 or 4. Also, if you really want to do costs estimates with high precision, the probability that the equation has a solution is not exactly 1/2.
 
 We will fix this issue by replacing it by Grover search without certainty.  We compute the success probability of U_F as follows.
 
